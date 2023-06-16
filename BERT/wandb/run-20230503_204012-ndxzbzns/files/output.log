@@ -1,0 +1,925 @@
+
+* TRAIN *
+The following columns in the training set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: text, __index_level_0__. If text, __index_level_0__ are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running training *****
+  Num examples = 8
+  Num Epochs = 3
+  Instantaneous batch size per device = 4
+  Total train batch size (w. parallel, distributed & accumulation) = 4
+  Gradient Accumulation steps = 1
+  Total optimization steps = 6
+  Number of trainable parameters = 124644866
+Automatic Weights & Biases logging enabled, to disable set os.environ["WANDB_DISABLED"] = "true"
+[nltk_data] Downloading package stopwords to
+[nltk_data]     C:\Users\ainam\AppData\Roaming\nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\ainam\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+loading file vocab.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\vocab.json
+loading file merges.txt from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\merges.txt
+loading file tokenizer.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\tokenizer.json
+loading file added_tokens.json from cache at None
+loading file special_tokens_map.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\special_tokens_map.json
+loading file tokenizer_config.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\tokenizer_config.json
+********************* TASK 2 *********************
+0    1
+1    0
+2    0
+3    0
+4    0
+5    0
+6    0
+7    0
+8    1
+Name: label, dtype: int64
+0    1
+1    0
+2    0
+3    0
+4    0
+5    0
+6    0
+7    0
+8    1
+Name: label, dtype: int64
+train2: Dataset({
+    features: ['text', 'label', '__index_level_0__', 'input_ids', 'attention_mask'],
+    num_rows: 7
+})
+labels tensor([0, 1, 1, 0, 0, 0, 0])
+loading configuration file config.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\config.json
+Model config RobertaConfig {
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.26.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 50262
+}
+loading weights file pytorch_model.bin from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\pytorch_model.bin
+Some weights of the model checkpoint at projecte-aina/roberta-base-ca-v2 were not used when initializing RobertaForSequenceClassification: ['lm_head.dense.weight', 'lm_head.decoder.weight', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.decoder.bias', 'lm_head.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at projecte-aina/roberta-base-ca-v2 and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.weight', 'classifier.out_proj.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+* TRAIN *
+The following columns in the training set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: text, __index_level_0__. If text, __index_level_0__ are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+c:\Users\ainam\AppData\Local\Programs\Python\Python310\lib\site-packages\transformers\optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 7
+  Num Epochs = 3
+  Instantaneous batch size per device = 4
+  Total train batch size (w. parallel, distributed & accumulation) = 4
+  Gradient Accumulation steps = 1
+  Total optimization steps = 6
+  Number of trainable parameters = 124644866
+Automatic Weights & Biases logging enabled, to disable set os.environ["WANDB_DISABLED"] = "true"
+{'loss': 0.692, 'learning_rate': 3.3333333333333335e-05, 'epoch': 1.0}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: text, __index_level_0__. If text, __index_level_0__ are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 2
+  Batch size = 16
+Saving model checkpoint to /homedtic/amoncho/CLUSTER/output/jlealtru/data_files/github/website_tutorials/results\checkpoint-2
+Configuration saved in /homedtic/amoncho/CLUSTER/output/jlealtru/data_files/github/website_tutorials/results\checkpoint-2\config.json
+Accuracy: 1.0
+Precision: 1.0
+Recall: 1.0
+F1-score: 1.0
+{'eval_loss': 0.6008660793304443, 'eval_accuracy': 1.0, 'eval_precision': 1.0, 'eval_recall': 1.0, 'eval_f1': 1.0, 'eval_runtime': 0.5693, 'eval_samples_per_second': 3.513, 'eval_steps_per_second': 1.757, 'epoch': 1.0}
+Model weights saved in /homedtic/amoncho/CLUSTER/output/jlealtru/data_files/github/website_tutorials/results\checkpoint-2\pytorch_model.bin
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: text, __index_level_0__. If text, __index_level_0__ are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 2
+  Batch size = 16
+{'loss': 0.6747, 'learning_rate': 1.6666666666666667e-05, 'epoch': 2.0}
+Saving model checkpoint to /homedtic/amoncho/CLUSTER/output/jlealtru/data_files/github/website_tutorials/results\checkpoint-4
+Configuration saved in /homedtic/amoncho/CLUSTER/output/jlealtru/data_files/github/website_tutorials/results\checkpoint-4\config.json
+Accuracy: 1.0
+Precision: 1.0
+Recall: 1.0
+F1-score: 1.0
+{'eval_loss': 0.5627416968345642, 'eval_accuracy': 1.0, 'eval_precision': 1.0, 'eval_recall': 1.0, 'eval_f1': 1.0, 'eval_runtime': 0.507, 'eval_samples_per_second': 3.945, 'eval_steps_per_second': 1.972, 'epoch': 2.0}
+Model weights saved in /homedtic/amoncho/CLUSTER/output/jlealtru/data_files/github/website_tutorials/results\checkpoint-4\pytorch_model.bin
+{'loss': 0.6331, 'learning_rate': 0.0, 'epoch': 3.0}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: text, __index_level_0__. If text, __index_level_0__ are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 2
+  Batch size = 16
+Saving model checkpoint to /homedtic/amoncho/CLUSTER/output/jlealtru/data_files/github/website_tutorials/results\checkpoint-6
+Configuration saved in /homedtic/amoncho/CLUSTER/output/jlealtru/data_files/github/website_tutorials/results\checkpoint-6\config.json
+Accuracy: 1.0
+Precision: 1.0
+Recall: 1.0
+F1-score: 1.0
+{'eval_loss': 0.555419921875, 'eval_accuracy': 1.0, 'eval_precision': 1.0, 'eval_recall': 1.0, 'eval_f1': 1.0, 'eval_runtime': 0.3278, 'eval_samples_per_second': 6.101, 'eval_steps_per_second': 3.05, 'epoch': 3.0}
+Model weights saved in /homedtic/amoncho/CLUSTER/output/jlealtru/data_files/github/website_tutorials/results\checkpoint-6\pytorch_model.bin
+Training completed. Do not forget to share your model on huggingface.co/models =)
+Loading best model from /homedtic/amoncho/CLUSTER/output/jlealtru/data_files/github/website_tutorials/results\checkpoint-2 (score: 1.0).
+{'train_runtime': 133.6114, 'train_samples_per_second': 0.157, 'train_steps_per_second': 0.045, 'train_loss': 0.6665891210238138, 'epoch': 3.0}
+* EVALUATE *
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: text. If text are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 9
+  Batch size = 16
+Accuracy: 0.7777777777777778
+Precision: 0.6049382716049383
+Recall: 0.7777777777777778
+F1-score: 0.6805555555555557
+********************* TASK 2 *********************
+0     1.0
+1     0.0
+2     0.0
+3     0.0
+4     0.0
+5     0.0
+6     0.0
+7     0.0
+8     1.0
+9     NaN
+10    NaN
+Name: label, dtype: float64
+0     1.0
+1     0.0
+2     0.0
+3     0.0
+4     0.0
+5     0.0
+6     0.0
+7     0.0
+8     1.0
+9     NaN
+10    NaN
+Name: label, dtype: float64
+train2: Dataset({
+    features: ['text', 'label', '__index_level_0__', 'input_ids', 'attention_mask'],
+    num_rows: 8
+})
+labels tensor([nan, 0., 0., 1., 0., 0., 0., 0.])
+loading configuration file config.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\config.json
+Model config RobertaConfig {
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.26.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 50262
+}
+loading weights file pytorch_model.bin from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\pytorch_model.bin
+Some weights of the model checkpoint at projecte-aina/roberta-base-ca-v2 were not used when initializing RobertaForSequenceClassification: ['lm_head.dense.weight', 'lm_head.decoder.weight', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.decoder.bias', 'lm_head.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at projecte-aina/roberta-base-ca-v2 and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.weight', 'classifier.out_proj.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+[nltk_data] Downloading package stopwords to
+[nltk_data]     C:\Users\ainam\AppData\Roaming\nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\ainam\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+loading file vocab.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\vocab.json
+loading file merges.txt from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\merges.txt
+loading file tokenizer.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\tokenizer.json
+loading file added_tokens.json from cache at None
+loading file special_tokens_map.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\special_tokens_map.json
+loading file tokenizer_config.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\tokenizer_config.json
+********************* TASK 2 *********************
+0     1
+1     0
+2     0
+3     0
+4     0
+5     0
+6     0
+7     0
+8     1
+9     2
+10    2
+Name: label, dtype: int64
+0     1
+1     0
+2     0
+3     0
+4     0
+5     0
+6     0
+7     0
+8     1
+9     2
+10    2
+Name: label, dtype: int64
+train2: Dataset({
+    features: ['text', 'label', '__index_level_0__', 'input_ids', 'attention_mask'],
+    num_rows: 8
+})
+labels tensor([2, 0, 0, 1, 0, 0, 0, 0])
+loading configuration file config.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\config.json
+Model config RobertaConfig {
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.26.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 50262
+}
+loading weights file pytorch_model.bin from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\pytorch_model.bin
+Some weights of the model checkpoint at projecte-aina/roberta-base-ca-v2 were not used when initializing RobertaForSequenceClassification: ['lm_head.dense.weight', 'lm_head.decoder.weight', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.decoder.bias', 'lm_head.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at projecte-aina/roberta-base-ca-v2 and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.weight', 'classifier.out_proj.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+The following columns in the training set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: text, __index_level_0__. If text, __index_level_0__ are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+c:\Users\ainam\AppData\Local\Programs\Python\Python310\lib\site-packages\transformers\optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 8
+  Num Epochs = 3
+  Instantaneous batch size per device = 4
+  Total train batch size (w. parallel, distributed & accumulation) = 4
+  Gradient Accumulation steps = 1
+  Total optimization steps = 6
+  Number of trainable parameters = 124644866
+Automatic Weights & Biases logging enabled, to disable set os.environ["WANDB_DISABLED"] = "true"
+* TRAIN *
+[nltk_data] Downloading package stopwords to
+[nltk_data]     C:\Users\ainam\AppData\Roaming\nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\ainam\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     C:\Users\ainam\AppData\Roaming\nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\ainam\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     C:\Users\ainam\AppData\Roaming\nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\ainam\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+c:\Users\ainam\AppData\Local\Programs\Python\Python310\lib\site-packages\huggingface_hub\file_download.py:129: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\ainam\.cache\huggingface\hub. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to see activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+loading file vocab.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--PlanTL-GOB-ES--roberta-base-ca\snapshots\9eddec657c2fa3ff828845def0096efbba1b0e08\vocab.json
+loading file merges.txt from cache at C:\Users\ainam/.cache\huggingface\hub\models--PlanTL-GOB-ES--roberta-base-ca\snapshots\9eddec657c2fa3ff828845def0096efbba1b0e08\merges.txt
+loading file tokenizer.json from cache at None
+loading file added_tokens.json from cache at None
+loading file special_tokens_map.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--PlanTL-GOB-ES--roberta-base-ca\snapshots\9eddec657c2fa3ff828845def0096efbba1b0e08\special_tokens_map.json
+loading file tokenizer_config.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--PlanTL-GOB-ES--roberta-base-ca\snapshots\9eddec657c2fa3ff828845def0096efbba1b0e08\tokenizer_config.json
+loading configuration file config.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--PlanTL-GOB-ES--roberta-base-ca\snapshots\9eddec657c2fa3ff828845def0096efbba1b0e08\config.json
+Model config RobertaConfig {
+  "_name_or_path": "PlanTL-GOB-ES/roberta-base-ca",
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.26.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 52000
+}
+loading configuration file config.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--PlanTL-GOB-ES--roberta-base-ca\snapshots\9eddec657c2fa3ff828845def0096efbba1b0e08\config.json
+Model config RobertaConfig {
+  "_name_or_path": "PlanTL-GOB-ES/roberta-base-ca",
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.26.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 52000
+}
+********************* TASK 2 *********************
+0     1.0
+1     0.0
+2     0.0
+3     0.0
+4     0.0
+5     0.0
+6     0.0
+7     0.0
+8     1.0
+9     NaN
+10    NaN
+Name: label, dtype: float64
+0     1.0
+1     0.0
+2     0.0
+3     0.0
+4     0.0
+5     0.0
+6     0.0
+7     0.0
+8     1.0
+9     NaN
+10    NaN
+Name: label, dtype: float64
+train2: Dataset({
+    features: ['text', 'label', '__index_level_0__', 'input_ids', 'attention_mask'],
+    num_rows: 8
+})
+labels tensor([nan, 0., 0., 1., 0., 0., 0., 0.])
+loading configuration file config.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\config.json
+Model config RobertaConfig {
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.26.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 50262
+}
+loading weights file pytorch_model.bin from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\pytorch_model.bin
+Some weights of the model checkpoint at projecte-aina/roberta-base-ca-v2 were not used when initializing RobertaForSequenceClassification: ['lm_head.dense.weight', 'lm_head.decoder.weight', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.decoder.bias', 'lm_head.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at projecte-aina/roberta-base-ca-v2 and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.weight', 'classifier.out_proj.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+* TRAIN *
+The following columns in the training set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: text, __index_level_0__. If text, __index_level_0__ are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+c:\Users\ainam\AppData\Local\Programs\Python\Python310\lib\site-packages\transformers\optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 8
+  Num Epochs = 3
+  Instantaneous batch size per device = 4
+  Total train batch size (w. parallel, distributed & accumulation) = 4
+  Gradient Accumulation steps = 1
+  Total optimization steps = 6
+  Number of trainable parameters = 124644866
+Automatic Weights & Biases logging enabled, to disable set os.environ["WANDB_DISABLED"] = "true"
+* TRAIN *
+The following columns in the training set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: text, __index_level_0__. If text, __index_level_0__ are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running training *****
+  Num examples = 8
+  Num Epochs = 3
+  Instantaneous batch size per device = 4
+  Total train batch size (w. parallel, distributed & accumulation) = 4
+  Gradient Accumulation steps = 1
+  Total optimization steps = 6
+  Number of trainable parameters = 124644866
+[nltk_data] Downloading package stopwords to
+[nltk_data]     C:\Users\ainam\AppData\Roaming\nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\ainam\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+loading file vocab.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--PlanTL-GOB-ES--roberta-base-ca\snapshots\9eddec657c2fa3ff828845def0096efbba1b0e08\vocab.json
+loading file merges.txt from cache at C:\Users\ainam/.cache\huggingface\hub\models--PlanTL-GOB-ES--roberta-base-ca\snapshots\9eddec657c2fa3ff828845def0096efbba1b0e08\merges.txt
+loading file tokenizer.json from cache at None
+loading file added_tokens.json from cache at None
+loading file special_tokens_map.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--PlanTL-GOB-ES--roberta-base-ca\snapshots\9eddec657c2fa3ff828845def0096efbba1b0e08\special_tokens_map.json
+loading file tokenizer_config.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--PlanTL-GOB-ES--roberta-base-ca\snapshots\9eddec657c2fa3ff828845def0096efbba1b0e08\tokenizer_config.json
+loading configuration file config.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--PlanTL-GOB-ES--roberta-base-ca\snapshots\9eddec657c2fa3ff828845def0096efbba1b0e08\config.json
+Model config RobertaConfig {
+  "_name_or_path": "PlanTL-GOB-ES/roberta-base-ca",
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.26.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 52000
+}
+loading configuration file config.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--PlanTL-GOB-ES--roberta-base-ca\snapshots\9eddec657c2fa3ff828845def0096efbba1b0e08\config.json
+Model config RobertaConfig {
+  "_name_or_path": "PlanTL-GOB-ES/roberta-base-ca",
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.26.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 52000
+}
+********************* TASK 2 *********************
+0     1
+1     0
+2     0
+3     0
+4     0
+5     0
+6     0
+7     0
+8     1
+9     2
+10    2
+Name: label, dtype: int64
+0     1
+1     0
+2     0
+3     0
+4     0
+5     0
+6     0
+7     0
+8     1
+9     2
+10    2
+Name: label, dtype: int64
+train2: Dataset({
+    features: ['text', 'label', '__index_level_0__', 'input_ids', 'attention_mask'],
+    num_rows: 8
+})
+labels tensor([2, 0, 0, 1, 0, 0, 0, 0])
+loading configuration file config.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\config.json
+Model config RobertaConfig {
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.26.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 50262
+}
+loading weights file pytorch_model.bin from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\pytorch_model.bin
+Some weights of the model checkpoint at projecte-aina/roberta-base-ca-v2 were not used when initializing RobertaForSequenceClassification: ['lm_head.dense.weight', 'lm_head.decoder.weight', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.decoder.bias', 'lm_head.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at projecte-aina/roberta-base-ca-v2 and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.weight', 'classifier.out_proj.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+* TRAIN *
+The following columns in the training set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: text, __index_level_0__. If text, __index_level_0__ are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+c:\Users\ainam\AppData\Local\Programs\Python\Python310\lib\site-packages\transformers\optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 8
+  Num Epochs = 3
+  Instantaneous batch size per device = 4
+  Total train batch size (w. parallel, distributed & accumulation) = 4
+  Gradient Accumulation steps = 1
+  Total optimization steps = 6
+  Number of trainable parameters = 124644866
+Automatic Weights & Biases logging enabled, to disable set os.environ["WANDB_DISABLED"] = "true"
+[nltk_data] Downloading package stopwords to
+[nltk_data]     C:\Users\ainam\AppData\Roaming\nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\ainam\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+loading file vocab.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--PlanTL-GOB-ES--roberta-base-ca\snapshots\9eddec657c2fa3ff828845def0096efbba1b0e08\vocab.json
+loading file merges.txt from cache at C:\Users\ainam/.cache\huggingface\hub\models--PlanTL-GOB-ES--roberta-base-ca\snapshots\9eddec657c2fa3ff828845def0096efbba1b0e08\merges.txt
+loading file tokenizer.json from cache at None
+loading file added_tokens.json from cache at None
+loading file special_tokens_map.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--PlanTL-GOB-ES--roberta-base-ca\snapshots\9eddec657c2fa3ff828845def0096efbba1b0e08\special_tokens_map.json
+loading file tokenizer_config.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--PlanTL-GOB-ES--roberta-base-ca\snapshots\9eddec657c2fa3ff828845def0096efbba1b0e08\tokenizer_config.json
+loading configuration file config.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--PlanTL-GOB-ES--roberta-base-ca\snapshots\9eddec657c2fa3ff828845def0096efbba1b0e08\config.json
+Model config RobertaConfig {
+  "_name_or_path": "PlanTL-GOB-ES/roberta-base-ca",
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.26.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 52000
+}
+loading configuration file config.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--PlanTL-GOB-ES--roberta-base-ca\snapshots\9eddec657c2fa3ff828845def0096efbba1b0e08\config.json
+Model config RobertaConfig {
+  "_name_or_path": "PlanTL-GOB-ES/roberta-base-ca",
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.26.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 52000
+}
+********************* TASK 2 *********************
+0     1
+1     0
+2     0
+3     0
+4     0
+5     0
+6     0
+7     0
+8     1
+9     2
+10    2
+Name: label, dtype: int64
+0     1
+1     0
+2     0
+3     0
+4     0
+5     0
+6     0
+7     0
+8     1
+9     2
+10    2
+Name: label, dtype: int64
+train2: Dataset({
+    features: ['text', 'label', '__index_level_0__', 'input_ids', 'attention_mask'],
+    num_rows: 8
+})
+labels tensor([2, 0, 0, 1, 0, 0, 0, 0])
+loading configuration file config.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\config.json
+Model config RobertaConfig {
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.26.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 50262
+}
+loading weights file pytorch_model.bin from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\pytorch_model.bin
+Some weights of the model checkpoint at projecte-aina/roberta-base-ca-v2 were not used when initializing RobertaForSequenceClassification: ['lm_head.dense.weight', 'lm_head.decoder.weight', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.decoder.bias', 'lm_head.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at projecte-aina/roberta-base-ca-v2 and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.weight', 'classifier.out_proj.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+The following columns in the training set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: text, __index_level_0__. If text, __index_level_0__ are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+* TRAIN *
+c:\Users\ainam\AppData\Local\Programs\Python\Python310\lib\site-packages\transformers\optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 8
+  Num Epochs = 3
+  Instantaneous batch size per device = 4
+  Total train batch size (w. parallel, distributed & accumulation) = 4
+  Gradient Accumulation steps = 1
+  Total optimization steps = 6
+  Number of trainable parameters = 124645635
+Automatic Weights & Biases logging enabled, to disable set os.environ["WANDB_DISABLED"] = "true"
+[nltk_data] Downloading package stopwords to
+[nltk_data]     C:\Users\ainam\AppData\Roaming\nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\ainam\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+loading file vocab.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\vocab.json
+loading file merges.txt from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\merges.txt
+loading file tokenizer.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\tokenizer.json
+loading file added_tokens.json from cache at None
+loading file special_tokens_map.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\special_tokens_map.json
+loading file tokenizer_config.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\tokenizer_config.json
+********************* TASK 2 *********************
+0     1
+1     0
+2     0
+3     0
+4     0
+5     0
+6     0
+7     0
+8     1
+9     2
+10    2
+Name: label, dtype: int64
+0     1
+1     0
+2     0
+3     0
+4     0
+5     0
+6     0
+7     0
+8     1
+9     2
+10    2
+Name: label, dtype: int64
+loading configuration file config.json from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\config.json
+Model config RobertaConfig {
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.26.0",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 50262
+}
+loading weights file pytorch_model.bin from cache at C:\Users\ainam/.cache\huggingface\hub\models--projecte-aina--roberta-base-ca-v2\snapshots\772dfdf344529cf40009372bf14915c4a8aa1152\pytorch_model.bin
+train2: Dataset({
+    features: ['text', 'label', '__index_level_0__', 'input_ids', 'attention_mask'],
+    num_rows: 8
+})
+labels tensor([2, 0, 0, 1, 0, 0, 0, 0])
+Some weights of the model checkpoint at projecte-aina/roberta-base-ca-v2 were not used when initializing RobertaForSequenceClassification: ['lm_head.dense.weight', 'lm_head.decoder.weight', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.decoder.bias', 'lm_head.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at projecte-aina/roberta-base-ca-v2 and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.weight', 'classifier.out_proj.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+* TRAIN *
+The following columns in the training set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: text, __index_level_0__. If text, __index_level_0__ are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+c:\Users\ainam\AppData\Local\Programs\Python\Python310\lib\site-packages\transformers\optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 8
+  Num Epochs = 3
+  Instantaneous batch size per device = 4
+  Total train batch size (w. parallel, distributed & accumulation) = 4
+  Gradient Accumulation steps = 1
+  Total optimization steps = 6
+  Number of trainable parameters = 124645635
+Automatic Weights & Biases logging enabled, to disable set os.environ["WANDB_DISABLED"] = "true"
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: text, __index_level_0__. If text, __index_level_0__ are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+{'loss': 1.0621, 'learning_rate': 3.3333333333333335e-05, 'epoch': 1.0}
+Accuracy: 0.3333333333333333
+Precision: 0.1111111111111111
+Recall: 0.3333333333333333
+F1-score: 0.16666666666666666
+***** Running Evaluation *****
+  Num examples = 3
+  Batch size = 16
+Saving model checkpoint to /homedtic/amoncho/CLUSTER/output/jlealtru/data_files/github/website_tutorials/results\checkpoint-2
+Configuration saved in /homedtic/amoncho/CLUSTER/output/jlealtru/data_files/github/website_tutorials/results\checkpoint-2\config.json
+{'eval_loss': 1.1030986309051514, 'eval_accuracy': 0.3333333333333333, 'eval_precision': 0.1111111111111111, 'eval_recall': 0.3333333333333333, 'eval_f1': 0.16666666666666666, 'eval_runtime': 0.9918, 'eval_samples_per_second': 3.025, 'eval_steps_per_second': 1.008, 'epoch': 1.0}
+Model weights saved in /homedtic/amoncho/CLUSTER/output/jlealtru/data_files/github/website_tutorials/results\checkpoint-2\pytorch_model.bin
+{'loss': 1.01, 'learning_rate': 1.6666666666666667e-05, 'epoch': 2.0}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: text, __index_level_0__. If text, __index_level_0__ are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 3
+  Batch size = 16
+Accuracy: 0.3333333333333333
+Precision: 0.1111111111111111
+Recall: 0.3333333333333333
+F1-score: 0.16666666666666666
+{'eval_loss': 1.108350157737732, 'eval_accuracy': 0.3333333333333333, 'eval_precision': 0.1111111111111111, 'eval_recall': 0.3333333333333333, 'eval_f1': 0.16666666666666666, 'eval_runtime': 0.6586, 'eval_samples_per_second': 4.555, 'eval_steps_per_second': 1.518, 'epoch': 2.0}
+Saving model checkpoint to /homedtic/amoncho/CLUSTER/output/jlealtru/data_files/github/website_tutorials/results\checkpoint-4
+Configuration saved in /homedtic/amoncho/CLUSTER/output/jlealtru/data_files/github/website_tutorials/results\checkpoint-4\config.json
+Model weights saved in /homedtic/amoncho/CLUSTER/output/jlealtru/data_files/github/website_tutorials/results\checkpoint-4\pytorch_model.bin
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: text, __index_level_0__. If text, __index_level_0__ are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 3
+  Batch size = 16
+Saving model checkpoint to /homedtic/amoncho/CLUSTER/output/jlealtru/data_files/github/website_tutorials/results\checkpoint-6
+Configuration saved in /homedtic/amoncho/CLUSTER/output/jlealtru/data_files/github/website_tutorials/results\checkpoint-6\config.json
+{'loss': 0.9634, 'learning_rate': 0.0, 'epoch': 3.0}
+Accuracy: 0.3333333333333333
+Precision: 0.1111111111111111
+Recall: 0.3333333333333333
+F1-score: 0.16666666666666666
+{'eval_loss': 1.1119999885559082, 'eval_accuracy': 0.3333333333333333, 'eval_precision': 0.1111111111111111, 'eval_recall': 0.3333333333333333, 'eval_f1': 0.16666666666666666, 'eval_runtime': 0.5314, 'eval_samples_per_second': 5.645, 'eval_steps_per_second': 1.882, 'epoch': 3.0}
+Model weights saved in /homedtic/amoncho/CLUSTER/output/jlealtru/data_files/github/website_tutorials/results\checkpoint-6\pytorch_model.bin
+Training completed. Do not forget to share your model on huggingface.co/models =)
+Loading best model from /homedtic/amoncho/CLUSTER/output/jlealtru/data_files/github/website_tutorials/results\checkpoint-2 (score: 0.3333333333333333).
+{'train_runtime': 104.774, 'train_samples_per_second': 0.229, 'train_steps_per_second': 0.057, 'train_loss': 1.011846383412679, 'epoch': 3.0}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: text. If text are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 11
+  Batch size = 16
+* EVALUATE *
+Accuracy: 0.6363636363636364
+Precision: 0.4049586776859504
+Recall: 0.6363636363636364
