@@ -1,0 +1,35 @@
+{
+    "os": "Windows-10-10.0.19044-SP0",
+    "python": "3.10.0",
+    "heartbeatAt": "2023-05-03T18:40:14.533386",
+    "startedAt": "2023-05-03T18:40:12.696973",
+    "docker": null,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "<python with no main file>",
+    "host": "LAPTOP-T3QF0K8A",
+    "username": "ainam",
+    "executable": "c:\\Users\\ainam\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "cpu_count": 2,
+    "cpu_count_logical": 4,
+    "cpu_freq": {
+        "current": 2511.0,
+        "min": 0.0,
+        "max": 2712.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2511.0,
+            "min": 0.0,
+            "max": 2712.0
+        }
+    ],
+    "disk": {
+        "total": 237.37335586547852,
+        "used": 227.6572380065918
+    },
+    "memory": {
+        "total": 7.886039733886719
+    }
+}
